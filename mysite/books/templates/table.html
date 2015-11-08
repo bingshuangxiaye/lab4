@@ -1,0 +1,18 @@
+<table border=1 align="center"><tr>
+<th>Title</th>
+<th>AuthorID</th>
+<th>Publisher</th>
+<th>Publishdate</th>
+<th>Price</th>
+ </tr>{% for book in book_list %} <tr> 
+ <td>{{ book.Title }}</td> <td>{{ book.AuthorID }}</td>
+ <td>{{ book.Publisher }}</td> 
+ <td>{{ book.PublishDate }}</td> 
+ <td>{{ book.Price }}</td>
+ <td> <a href="/delete/?ISBN={{book.ISBN}}">delete</a> </td> 
+ <td> <a href="/book_modify/?ISBN={{book.ISBN}}">modify</a> </td> 
+</tr>
+{% endfor %}
+
+<li><a href="/welcome/?ISBN={{book.ISBN}}">Go back to the first page</a></li>
+</table>

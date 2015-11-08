@@ -1,0 +1,16 @@
+<table border=1 align="center"><tr>
+<th>AuthorID</th>
+<th>Name</th>
+<th>Country</th>
+<th>Age</th>
+ </tr>{% for author in author_list %} <tr> 
+ <td>{{ author.AuthorID }}</td>
+ <td>{{ author.Name }}</td> 
+ <td>{{ author.Country }}</td> 
+ <td>{{ author.Age }}</td>
+ <td> <a href="/author_modify/?AuthorID={{author.AuthorID}}">modify</a> </td> 
+</tr>
+{% endfor %}
+
+<li><a href="/welcome/?ISBN={{book.ISBN}}">Go back to the first page</a></li>
+</table>

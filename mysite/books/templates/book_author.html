@@ -1,0 +1,26 @@
+<table border=1 align="center">
+ <tr>
+  <th>ISBN</th><th>Title</th><th>AuthorID</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+<th>   </th>
+ </tr>
+ <tr>
+  <td>{{ book.ISBN}}</td>
+  <td>{{ book.Title }}</td>
+  <td>{{ book.AuthorID }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+ </tr>
+ <tr>
+  <th>AuthorID</th><th>Name</th><th>Age</th><th>Country</th>
+ </tr>
+ <tr>
+  <td>{{ author.AuthorID}}</td>
+  <td>{{ author.Name }}</td>
+  <td>{{ author.Age }}</td>
+  <td>{{ author.Country }}</td>
+ </tr>
+<li><a href="/welcome/?ISBN={{book.ISBN}}">Go back to the first page</a></li>
+</table>
+ 
+

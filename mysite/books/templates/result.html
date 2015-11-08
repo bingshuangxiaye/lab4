@@ -1,0 +1,14 @@
+<li><a href="/welcome/?ISBN={{book.ISBN}}">Go back to the first page</a></li>
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if books %}
+    <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+    <ul>
+   	{% for book in books %}
+        <li><a href="/book_author/?ISBN={{book.ISBN}}">{{ book.Title}}</a></li>
+        {% endfor %}
+
+    </ul>
+{% else %}
+    <p>No books matched your search criteria.</p>
+{% endif %}
